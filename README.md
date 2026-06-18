@@ -55,7 +55,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Install the latest version of code-server using the official Ubuntu script
-RUN curl -fsSL [https://code-server.dev/install.sh](https://code-server.dev/install.sh) | sh
+RUN curl -fsSL https://code-server.dev/install.sh | sh
 
 # Give the built-in 'ubuntu' user (UID 1000) passwordless sudo rights
 RUN echo "ubuntu ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
